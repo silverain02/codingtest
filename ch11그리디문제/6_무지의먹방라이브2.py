@@ -24,3 +24,4 @@ def solution(food_times, k):
 
 print(solution([3,1,2],5))
 
+#4.0/100 (3~시간초과)
