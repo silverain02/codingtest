@@ -1,6 +1,6 @@
 #12_기둥과 보 설치 // 실
 import copy
-answer = []
+
 #'보' 설치 가능 여부 확인
 #한쪽 끝이 기둥 위 or 양쪽끝 보
 def ck_bmp(x,y,answer):
@@ -10,17 +10,9 @@ def ck_bmp(x,y,answer):
 def ck_plr(x,y,answer):
     if y==0 or ([x-1,y,1] in answer) or ([x,y,1] in answer) or ([x,y-1,0] in answer):
         return True
-    
-#선택정렬 함수
-def srt(lst,c):
-    for i in range(len(lst)):
-        min_index=i
-        for j in range(i+1,len(lst)):
-            if lst[min_index] > lst[j]:
-                min_index = j
-    lst[i],lst[min_index] = lst[min_index],lst[i]
 
 def solution(n, build_frame):
+    answer = []
     ck = 1
     
     #buil_frame 순회
